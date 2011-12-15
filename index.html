@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<!--
+  Copyright 2010 Google Inc.
+ 
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+ 
+     http://www.apache.org/licenses/LICENSE-2.0
+ 
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+ 
+  Original slides: Marcin Wichary (mwichary@google.com)
+  Modifications: Chrome Developer Relations <chrome-devrel@googlegroups.com>
+                 Alex Russell (slightlyoff@chromium.org)
+                 Brad Neuberg
+                 Florian Schuhmann
+-->
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+<title>HTML5 Presentation Template</title>
+<link
+	href="http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono"
+	rel="stylesheet" type="text/css" />
+<link href="styles/default.css" type="text/css" rel="stylesheet"
+	class="theme" media="screen" />
+<link href="styles/custom.css" type="text/css" rel="stylesheet"
+	media="screen" />
+</head>
+<body>
+	<div class="presentation">
+		<div id="presentation-counter"></div>
+		<div class="slides">
+			<!-- Slide //_-> -->
+			<div class="slide" id="controls-slide">
+				<header>Introduction</header>
+				<section>
+					<h3>This presentation is an HTML5 website.</h3>
+					<h3>Slides controls:</h3>
+					<ul style="margin: 0 0 50px 0;">
+						<li><span class="key">&larr;</span> and <span class="key">&rarr;</span>
+							or <span class="key">mouse scroll wheel</span> to move around.</li>
+						<li><span class="key">Ctrl/Command</span> and <span
+							class="key">+</span> or <span class="key">-</span> to zoom in and
+							out.</li>
+						<li><span class="key">N</span> to toggle speaker notes.</li>
+					</ul>
+					<aside class="note">
+						<section>
+							<a target="_blank"
+								href="http://lights.elliegoulding.com/index.html">
+								Einstiegsbeispiel</a>
+						</section>
+					</aside>
+				</section>
+			</div>
+			<!-- <-_// Slide  -->
+			<!-- Slide //_-> -->
+			<div class="slide" id="title-slide">
+				<section class="middle">
+					<img alt="HTML5" src="src/html5-topper.png" />
+					<hgroup>
+						<h1>HTML5 Title Slide</h1>
+						<h2>Subtitle</h2>
+					</hgroup>
+					<p>author name</p>
+				</section>
+			</div>
+			<!-- <-_// Slide  -->
+			<!-- Slide //_-> -->
+			<div class="slide" id="table-of-contents">
+				<header>
+					<h1>Agenda</h1>
+				</header>
+				<section>
+				<!-- filled automatically with the topics of the transitionSlides -->
+					<ul id="toc-list">
+					</ul>
+				</section>
+			</div>
+			<!-- <-_// Slide  -->
+			<!-- Slide //_-> -->
+			<div class="slide transitionSlide" id="someContent-title">
+				<section class="middle">
+					<h2>some chapter title goes here</h2>
+					<p>subtitle goes here</p>
+					<!-- some image needed in the dimensions 32x32 (for the toc) and 64x64 -->
+					<img src="src/HTML5_Logo_64.png" title="HTML5" alt="HTML5">
+				</section>
+			</div>
+			<!-- <-_// Slide  -->
+			<!-- Slide //_-> -->
+			<div class="slide someContent" id="someContent-slide1">
+				<header>
+					<span class="css">CSS</span>
+					<span class="js">JS</span>
+					<h1>here goes some title</h1>
+				</header>
+				<section>
+					<ul class="list">
+						<li><span>this</span></li>
+						<li><span>is</span>
+							<ul>
+								<li><span>a</span></li>
+							</ul></li>
+						<li><span>nice</span>
+							<ul>
+								<li><span>list</span></li>
+							</ul></li>
+					</ul>
+				</section>
+				<aside class="note">
+					<section>
+						here are some speaker notes!
+					</section>
+				</aside>
+			</div>
+			<!-- <-_// Slide  -->
+			<!-- Slide //_-> -->
+			<div class="slide someContent" id="someContent-slide2">
+				<header>
+					<h1>Some other title</h1>
+				</header>
+				<section>
+					<table>
+						<thead>
+							<tr>
+								<th>W3C</th>
+								<th>WHATWG</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td style="border-right: 1px solid #F14A29; padding-right: 20px">
+									<ul class="list">
+										<li><span>HTML5</span></li>
+										<li><span>focused HTML</span></li>
+									</ul>
+								</td>
+								<td>
+									<ul class="list">
+										<li><span>HTML</span></li>
+										<li><span>Living Standard</span></li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				<aside class="note">
+					<section>
+						<a href="http://www.whatwg.org/html">www.whatwg.org/html</a><br>
+						<a href="http://www.w3.org/TR/html5/">www.w3.org/TR/html5/</a>
+					</section>
+				</aside>
+			</div>
+			<!-- <-_// Slide  -->
+			<!-- Slide //_-> -->
+			<div class="slide someContent" id="someContent-slide3">
+				<section class="middle formula">
+					<div data-build>
+						<span>HTML5 ~= <span class="html">HTML</span> + <span
+							class="css">CSS</span> + <span class="js">JS</span>+ ...
+						</span>
+					</div>
+				</section>
+			</div>
+			<!-- <-_// Slide  -->
+			<!-- Slide //_-> -->
+			<div class="slide someContent" id="someContent-slide4">
+				<header>
+					<span class="html">HTML</span>
+					<h1>semantic HTML5</h1>
+				</header>
+				<section>
+					<pre>
+&lt;<b>!DOCTYPE html</b>&gt;
+&lt;html&gt;
+&lt;head&gt;
+ &lt;title&gt;Beispiel&lt;/title&gt;
+ &lt;<b>meta</b> <em>charset</em>="utf-8"/&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ &lt;<b>header</b>&gt;
+   &lt;h1&gt;Hello&lt;/h1&gt;
+  &lt;<b>nav</b>&gt;
+   &lt;h1&gt;navigation&lt;/h1&gt;
+   &lt;ul&gt;
+	[...]
+   &lt;/ul&gt;
+  &lt;/nav&gt;
+ &lt;/header&gt;
+[...]
+ &lt;<b>footer</b>&gt;
+  &lt;p&gt;&lt;<b>small</b>&gt;&copy; 2011&lt;/small&gt;&lt;/p&gt;
+ &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+				</section>
+			</div>
+			<!-- <-_// Slide  -->
+			<!-- Slide //_-> -->
+			<div class="slide" id="thanks-title">
+				<section class="middle">
+					<h2>Thanks for use this template!</h2>
+					<img alt="HTML5 the Future" src="src/HTML5_sticker.png"
+						style="width: 500px;">
+					<h4><a href="https://github.com/FlorianX" title="FlorianX @GitHub" target="_blank">FlorianX @GitHub</a></h4>
+				</section>
+			</div>
+			<!-- <-_// Slide  -->
+			<div id="speaker-note" class="invisible" style="display: none;"></div>
+		</div>
+		<!-- slides -->
+	</div>
+	<!-- presentation -->
+	<!--[if lt IE 9]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">
+    </script>
+    <script>CFInstall.check({ mode: "overlay" });</script>
+    <![endif]-->
+	<script type="text/javascript" src="js/presentation.js"></script>
+</body>
+</html>
