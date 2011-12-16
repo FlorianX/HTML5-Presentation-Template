@@ -32,6 +32,7 @@
 	class="theme" media="screen" />
 <link href="styles/custom.css" type="text/css" rel="stylesheet"
 	media="screen" />
+<script type="text/javascript" src="js/modernizr.js"></script>
 </head>
 <body>
 	<div class="presentation">
@@ -50,6 +51,7 @@
 							class="key">+</span> or <span class="key">-</span> to zoom in and
 							out.</li>
 						<li><span class="key">N</span> to toggle speaker notes.</li>
+						<li>Your browser<span class="noSync"> doesn't</span> support synchronizing windows. You can<span class="noSync">'t</span> use one window for speaker notes and one for the audience.<span class="noSync"> This works e.g. with Google Chrome!</span></li>
 					</ul>
 				</section>
 			</div>
@@ -91,8 +93,8 @@
 			<!-- Slide //_-> -->
 			<div class="slide someContent" id="someContent-slide1">
 				<header>
-					<span class="css">CSS</span>
-					<span class="js">JS</span>
+					<span class="CSS">CSS</span>
+					<span class="JS">JS</span>
 					<h1>here goes some title</h1>
 				</header>
 				<section>
@@ -158,8 +160,8 @@
 			<div class="slide someContent" id="someContent-slide3">
 				<section class="middle formula">
 					<div data-build>
-						<span>HTML5 ~= <span class="html">HTML</span> + <span
-							class="css">CSS</span> + <span class="js">JS</span>+ ...
+						<span>HTML5 ~= <span class="HTML">HTML</span> + <span
+							class="CSS">CSS</span> + <span class="JS">JS</span>+ ...
 						</span>
 					</div>
 				</section>
@@ -168,7 +170,7 @@
 			<!-- Slide //_-> -->
 			<div class="slide someContent" id="someContent-slide4">
 				<header>
-					<span class="html">HTML</span>
+					<span class="HTML">HTML</span>
 					<h1>semantic HTML5</h1>
 				</header>
 				<section>
@@ -219,6 +221,12 @@
     </script>
     <script>CFInstall.check({ mode: "overlay" });</script>
     <![endif]-->
-	<script type="text/javascript" src="js/presentation.js"></script>
+    <script type="text/javascript">
+	Modernizr.load({
+		test: Modernizr.sharedworkers,
+		yep : 'js/presentation.js',
+		nope: 'js/presentation-noWorker.js'
+	});
+    </script>
 </body>
 </html>

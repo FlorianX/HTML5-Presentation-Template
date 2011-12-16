@@ -306,14 +306,6 @@
 			_t.go(e.state);
 		}, false);
 		this._update();
-		parent = this;
-		this._sharedWorker = new SharedWorker('js/worker.js');
-		this._sharedWorker.port.onmessage = function (event) {
-			var func = event.data.func;
-			parent.current = (this.current+1 != event.data.current)? event.data.current : this.current;
-			console.log(event);
-			eval('parent.'+func+'()');
-		};
 	};
 	SlideShow.prototype = {
 		_speakerNote : query('#speaker-note')[0],
@@ -401,12 +393,10 @@
 			}
 
 			if (delta > 0) {
-				this._sharedWorker.port.postMessage({func: 'prev', current: this.current});
 				this.prev();
 				return;
 			}
 			if (delta < 0) {
-				this._sharedWorker.port.postMessage({func: 'next', current: this.current});
 				this.next();
 				return;
 			}
@@ -419,13 +409,11 @@
 			switch (e.keyCode) {
 			case 38: // up arrow
 			case 37: // left arrow
-				this._sharedWorker.port.postMessage({func: 'prev', current: this.current});
 				this.prev();
 				break;
 			case 40: // down arrow
 			case 39: // right arrow
 			case 32: // space
-				this._sharedWorker.port.postMessage({func: 'next', current: this.current});
 				this.next();
 				break;
 			case 66: // B -> for presenter
@@ -446,10 +434,8 @@
 			var delta = this._touchStartX - e.changedTouches[0].pageX;
 			var SWIPE_SIZE = 150;
 			if (delta > SWIPE_SIZE) {
-				this._sharedWorker.port.postMessage({func: 'next', current: this.current});
 				this.next();
 			} else if (delta < -SWIPE_SIZE) {
-				this._sharedWorker.port.postMessage({func: 'prev', current: this.current});
 				this.prev();
 			}
 		},

@@ -89,7 +89,7 @@ body {
 	width: 100%;
 }
 
-.slide:not  (.transitionSlide  ) .counter:after {
+.slide:not (.transitionSlide) .counter:after {
 	content: '';
 	width: 32px;
 	height: 32px;
@@ -386,7 +386,7 @@ video,canvas {
 	border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.css,.js,.html,.key {
+.CSS,.JS,.HTML,.key {
 	font-family: 'Droid Sans';
 	color: black;
 	display: inline-block;
@@ -412,27 +412,27 @@ video,canvas {
 	font-family: "Lucida console", Monospace, Arial;
 }
 
-:not(header)>.css,:not(header)>.js,:not(header)>.html,:not(header)>.key
+:not(header)>.CSS,:not(header)>.JS,:not(header)>.HTML,:not(header)>.key
 	{
 	margin: 0 5px;
 	bottom: 4px;
 }
 
-.css {
+.CSS {
 	background: -webkit-gradient(linear, left top, left bottom, from(#ff4),
 		to(#ffa) );
 	background-color: #ff4;
 	background: -moz-linear-gradient(left top, #ff4, #ffa);
 }
 
-.js {
+.JS {
 	background: -webkit-gradient(linear, left top, left bottom, from(#4f4),
 		to(#afa) );
 	background-color: #4f4;
 	background: -moz-linear-gradient(left top, #4f4, #afa);
 }
 
-.html {
+.HTML {
 	background: -webkit-gradient(linear, left top, left bottom, from(#e88),
 		to(#fee) );
 	background-color: #e88;
@@ -487,7 +487,7 @@ video,canvas {
 	border-right: 5px solid #AAA;
 }
 
-div:not   (.current   ).reduced {
+div:not (.current).reduced {
 	-webkit-transform: scale(0.8);
 	-moz-transform: scale(0.8);
 	-o-transform: scale(0.8);
@@ -511,8 +511,8 @@ ul.bulleted {
 }
 
 #title-slide h1 {
-    font-size: 36px;
-    letter-spacing: -2px;
+	font-size: 36px;
+	letter-spacing: -2px;
 }
 
 #title-slide section img {
@@ -634,4 +634,13 @@ aside.note {
 
 #speaker-note li {
 	padding: 0;
+}
+
+/* modify introduction by check sharedWorkers */
+.noSync {
+	display: inline;
+}
+
+.sharedworkers .noSync {
+	display: none;
 }
